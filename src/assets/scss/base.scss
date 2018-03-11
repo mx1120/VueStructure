@@ -1,0 +1,39 @@
+$divide: 18;
+$ppr: 720px/$divide/1rem;
+$pprVal: 720/18;
+
+
+@function strip-units($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+@function addRemUnit($val, $unit: px) {
+	@if $val !=0 {
+		$val: $val/$pprVal;
+		$val: $val + rem;
+	}
+	@return $val;
+}
+
+@mixin position ($left, $top){
+	position: absolute;
+	top: $top;
+	left: $left;
+}
+
+@mixin posCenter {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%)
+}
+
+@mixin clear {
+	&:after {
+		content: "";
+		display: block;
+		height:0;
+		overflow: hidden;
+		clear: both;
+	}
+}
