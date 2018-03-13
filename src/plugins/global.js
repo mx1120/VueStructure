@@ -59,6 +59,7 @@ baseConfig.install = (Vue, router) => {
 		* from上一个路由路径
 		* 需要调用next()生效
 		*/
+		/*全局过渡动画*/
 		const toIndex = history.getItem(to.path)
 		const fromIndex = history.getItem(from.path)
 		if(toIndex){

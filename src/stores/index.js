@@ -8,6 +8,7 @@ import mutations from './mutations'
 import * as actions from './actions'
 import * as getters from './getter'
 import createLogger from 'vuex/dist/logger'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
 
@@ -19,7 +20,7 @@ const store = new Vuex.Store({
 	mutations,
 	getters,
 	strict: debug,
-	plugins: debug ? [createLogger()] : []
+	plugins: debug ? [createLogger(), createPersistedState()] : []
 })
 
 export default store
