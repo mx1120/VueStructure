@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import index from '@/components/index.vue'
 import slot from './slot/index'
 import direc from './directive/index'
+import transition from './transition/index'
 
 Vue.use(Router)
 
@@ -14,7 +15,7 @@ let routes = [
 	}
 ]
 
-routes = routes.concat(slot, direc)
+routes = routes.concat(slot, direc, transition)
 
 export default new Router({
     mode:'history',

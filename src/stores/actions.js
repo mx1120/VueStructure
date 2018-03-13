@@ -3,6 +3,12 @@
  */
 //抛出方法，在方法内执行mutation，改变state状态值
 
-export const userInfoUp = async ({commit, diapatch, state}, data) => {
+import * as types from './mutation-types'
+
+export const userInfoUp = async ({commit, dispatch, state}, data) => {
 	//dispatch可调用其他action方法
+}
+
+export const COUNT_DIRECTION = ({commit, state}, payload) => {
+	commit(types.COUNT_DIRECTION, payload)
 }

@@ -7,13 +7,20 @@
 </template>
 
 <script type="text/ecmascript-6">
+    import  * as types from 'vuex'
 	export default {
 		data() {
 			return {
 				country: "M78"
 			}
 		},
+        methods: {
+            ...types.mapActions({
+            	'Direction': 'COUNT_DIRECTION'
+            })
+        },
 		created() {
+            this.Direction({'direction': 'forward'})
 		}
 	}
 </script>

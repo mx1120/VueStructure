@@ -3,7 +3,8 @@
  */
 
 const state = {
-	userInfo: null
+	userInfo: null,
+	direction: null
 }
 
 export default state

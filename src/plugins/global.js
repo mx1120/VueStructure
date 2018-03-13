@@ -3,6 +3,14 @@
  */
 import axios from 'axios'
 import loading from './../components/baseComponents/Loading.vue'
+import store from './../stores'
+
+const history = window.sessionStorage
+history.clear()
+let historyCount = history.getItem('count') * 1 || 0
+history.setItem('/', 0)
+
+
 
 const baseConfig = {
 	install: null
@@ -36,11 +44,11 @@ baseConfig.install = (Vue, router) => {
 	})
 
 	//promise原型链新增finally方法，用于loading状态控制,或者自定义的异常捕获
-	Promise.prototype.finally = (callback) => {
-		let p = this.constructor
+	Promise.prototype.finally = callback => {
+		let Pro = this.constructor
 		return this.then(
-			value => p.resolve(callback()).then(() => value),
-			reason => p.resolve(callback()).then(() => { throw reason})
+			value => Pro.resolve(callback()).then(() => value),
+			reason => Pro.resolve(callback()).then(() => { throw reason})
 		)
 	}
 
@@ -50,7 +58,21 @@ baseConfig.install = (Vue, router) => {
 		* to下一个路由路径
 		* from上一个路由路径
 		* 需要调用next()生效
-		* */
+		*/
+		const toIndex = history.getItem(to.path)
+		const fromIndex = history.getItem(from.path)
+		if(toIndex){
+			if(!fromIndex || parseInt(toIndex, 10) > parseInt(fromIndex, 10) || (toIndex === '0' && fromIndex === '0')){
+				store.commit('COUNT_DIRECTION', {direction: 'forward'})
+			}else {
+				store.commit('COUNT_DIRECTION', {direction: 'reverse'})
+			}
+		}else {
+			++historyCount
+			history.setItem('count', historyCount)
+			to.path !== '/' && history.setItem(to.path, historyCount)
+			store.commit('COUNT_DIRECTION', {direction: 'forward'})
+		}
 		next()
 	})
 }
@@ -65,7 +87,7 @@ Directive.install = Vue => {
 		},
 		// 当被绑定的元素插入到 DOM 中时……
 		inserted (el) {
-			el.style.backgroundColor = '#903'
+			el.style.backgroundColor = '#8f2c99'
 		},
 		//节点更新调用
 		update() {},
