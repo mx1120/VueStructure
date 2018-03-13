@@ -5,10 +5,10 @@
 
 import * as types from './mutation-types'
 
-export const userInfoUp = async ({commit, dispatch, state}, data) => {
+export const userInfoUp = async ({ dispatch, commit, state }, data) => {
 	//dispatch可调用其他action方法
 }
 
-export const COUNT_DIRECTION = ({commit, state}, payload) => {
+export const COUNT_DIRECTION = ({ commit, state }, payload) => {
 	commit(types.COUNT_DIRECTION, payload)
 }
