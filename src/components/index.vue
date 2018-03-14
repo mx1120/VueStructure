@@ -1,8 +1,6 @@
 <template>
     <div>
-        this is my resume
-        <p class="test">1123213144</p>
-        <loading></loading>
+
     </div>
 </template>
 

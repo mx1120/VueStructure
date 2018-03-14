@@ -9,7 +9,10 @@ import Vuex from 'vuex'
 import store from './stores'
 import fastClick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 import { baseConfig, loadingComponent, Directive, Filter } from './plugins/global'
+
 
 Vue.config.productionTip = false
 
@@ -20,6 +23,8 @@ fastClick.attach(document.body)
 Vue.use(Vuex)
 Vue.use(VueLodash, lodash)
 Vue.use(baseConfig, router)
+/*swiper插件*/
+Vue.use(VueAwesomeSwiper)
 //懒加载
 Vue.use(VueLazyload, {
 	error: '/static/lazyload/error.png',
