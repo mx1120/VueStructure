@@ -3,14 +3,15 @@
         <div class="header">
             <slot name="header"></slot>
         </div>
+        <!-- 这里写入备用内容 当父元素的没有任何内容发布的时候就是用匿名槽点中的内容-->
         <slot>father has nothing props</slot>
         <ul>
             <slot name="item"
-                  v-for="item in items"
+                  v-for="item,index in items"
                   :text="item.text"
                   :info="item.info"
+                  :index="index"
             >
-                <!-- 这里写入备用内容 -->
             </slot>
         </ul>
     </div>
@@ -21,15 +22,15 @@
 		data() {
 			return {
 				items: [
-                    {"text":1, "info": 'm'},
-                    {"text":2, "info": 'm'},
-                    {"text":3, "info": 'm'},
-                    {"text":4, "info": 'm'},
-                    {"text":5, "info": 'm'},
-                    {"text":6, "info": 'm'},
-                    {"text":7, "info": 'm'},
-                    {"text":8, "info": 'm'},
-                    {"text":9, "info": 'm'}
+                    {"text":'vue', "info": 'm'},
+                    {"text":'vuex', "info": 'm'},
+                    {"text":'Eventbus', "info": 'm'},
+                    {"text":'react', "info": 'm'},
+                    {"text":'react-native', "info": 'm'},
+                    {"text":'ng', "info": 'm'},
+                    {"text":'go', "info": 'm'},
+                    {"text":'python', "info": 'm'},
+                    {"text":'java', "info": 'm'}
                 ]
             }
 		},
@@ -39,6 +40,7 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
+    @import "../../assets/scss/base";
 .header {
     color: blue;
 }

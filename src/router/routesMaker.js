@@ -3,8 +3,6 @@
 import route0 from "./map/directive/index.js"
 import route1 from "./map/index/index.js"
 import route2 from "./map/slot/index.js"
-import route3 from "./map/swiper/index.js"
-import route4 from "./map/transition/index.js"
 let routes = []
-let myRoutes = routes.concat(route0,route1,route2,route3,route4)
+let myRoutes = routes.concat(route0,route1,route2)
 export default myRoutes;
