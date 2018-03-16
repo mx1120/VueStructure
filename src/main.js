@@ -11,7 +11,7 @@ import fastClick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-import { baseConfig, loadingComponent, Directive, Filter } from './plugins/global'
+import { baseConfig, loadingComponent, Directive, Filter } from './until/global'
 
 
 Vue.config.productionTip = false
