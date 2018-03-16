@@ -12,21 +12,13 @@ history.setItem('/', 0)
 
 
 
-const baseConfig = {
-	install: null
-}
+const baseConfig = {}
 
-const Directive = {
-	install: null
-}
+const Directive = {}
 
-const loadingComponent = {
-	install: null
-}
+const loadingComponent = {}
 
-const Filter = {
-	install: null
-}
+const Filter = {}
 
 baseConfig.install = (Vue, router) => {
 	//axois不属于vue插件，需要在vue原型链上增加方法
