@@ -12,3 +12,7 @@ export const userInfoUp = async ({ dispatch, commit, state }, data) => {
 export const COUNT_DIRECTION = ({ commit, state }, payload) => {
 	commit(types.COUNT_DIRECTION, payload)
 }
+
+export const SET_USERINFO = ({commit, state}, data) => {
+	commit(types.USER_INFO, data)
+}

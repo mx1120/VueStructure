@@ -10,11 +10,16 @@
   import * as types from 'vuex'
 export default {
   name: 'App',
+  methods: {
+      ...types.mapActions({
+      	  'user_info': 'SET_USERINFO'
+      })
+  },
   computed:{
 	  ...types.mapState({
 	  	direction: state => state.direction
       })
-  }
+  },
 }
 </script>
 
