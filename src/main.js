@@ -10,7 +10,10 @@ import store from './stores'
 import fastClick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import iView from 'iview'
 import 'swiper/dist/css/swiper.css'
+import 'iview/dist/styles/iview.css'
+import locale from 'iview/dist/locale/en-US'
 import { baseConfig, loadingComponent, Directive, Filter } from './until/global'
 
 
@@ -21,6 +24,7 @@ fastClick.attach(document.body)
 
 //插件引用
 Vue.use(Vuex)
+Vue.use(iView, { locale })
 Vue.use(VueLodash, lodash)
 Vue.use(baseConfig, router)
 /*swiper插件*/
