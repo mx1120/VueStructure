@@ -22,3 +22,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 # 全村最帅的人
+# 技术要点
+# vue 2.+ vuex store router elementUI iView 持久化存储
+
+
+# dz...........................................
