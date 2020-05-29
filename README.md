@@ -23,6 +23,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 全村最帅的人
 # 技术要点
 # vue 2.+ vuex store router elementUI iView 持久化存储
@@ -40,3 +41,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 =======
 # 我是最帅的人孟祥
 >>>>>>> mxmxmxmxmxmxm
+=======
+# 技术要点
+# vue 2.+ vuex store router elementUI iView 持久化存储
+>>>>>>> mx
