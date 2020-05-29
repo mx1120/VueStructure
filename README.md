@@ -19,6 +19,10 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
 # 全村最帅的人
 # 技术要点
 # vue 2.+ vuex store router elementUI iView 持久化存储
+
