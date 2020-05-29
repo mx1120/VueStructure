@@ -25,3 +25,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # vue 2.+ vuex store router elementUI iView 持久化存储
 
 
+# mxmxmxmxmxmxmxmxm
