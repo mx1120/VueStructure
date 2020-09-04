@@ -7,7 +7,7 @@
         <slot>father has nothing props</slot>
         <ul>
             <slot name="item"
-                  v-for="item,index in items"
+                  v-for="(item, index) in items"
                   :text="item.text"
                   :info="item.info"
                   :index="index"

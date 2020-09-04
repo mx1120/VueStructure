@@ -9,6 +9,10 @@
                         {{props.index + 1}} {{props.text}}
                     </li>
                 </child>
+                 <div>
+                123123
+                <input type="file">
+            </div>
             </swiper-slide>
             <swiper-slide class="inner">I'm Slide 2</swiper-slide>
             <swiper-slide class="inner">I'm Slide 3</swiper-slide>

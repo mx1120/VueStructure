@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>升级浏览器</title>
+</head>
+<body>
+  <div class="browser">
+    <div class="content">
+      <div class="header">请升级您的浏览器</div>
+      <div class="info">尊敬的用户，您现在使用的浏览器版本过低，请升级后继续使用。</div>
+      <div class="toUser">您可以选择：</div>
+      <div class="browserLink">
+        <div class="browserChoose" id='chrome'>
+          <img src="./image/google.png" alt="" style="width: 100px; height: 100px; display: block">
+          谷歌浏览器
+        </div>
+        <div class="browserChoose" id='firefox'>
+          <img src="./image/firefox.png" alt="" style="width: 100px; height: 100px; display: block">
+          火狐浏览器
+        </div>
+        <div class="browserChoose" id='ie'>
+          <img src="./image/IE.png" alt="" style="width: 100px; height: 100px; display: block">
+          IE浏览器10+
+        </div>
+      </div>
+      <div class="info hand" id='goOrigin'>如无法升级，请点击此处登录旧版网银</div>
+    </div>
+  </div>
+</body>
+</html>
+<script>
+document.getElementById('chrome').onclick=function(){
+  location.href = 'https://www.google.cn/chrome/index.html'
+}
+document.getElementById('firefox').onclick=function(){
+  location.href = 'https://www.firefox.com.cn/'
+}
+document.getElementById('ie').onclick=function(){
+  location.href = 'https://support.microsoft.com/zh-cn/help/17621/internet-exploer-downloads'
+}
+document.getElementById('goOrigin').onclick=function(){
+  var type = location.search.split('=')[1]
+  if (type == 'p') {
+    location.href = 'https://pnb.ddyzbank.com/pibank/login.jsp'
+  } else if (type == 'e'){
+    location.href = 'https://enb.ddyzbank.com/eibank/login.html'
+  } else {
+    location.href = 'http://www.bankofluoyang.com.cn/index.jsp'
+  }
+}
+</script>
+<style>
+  html {
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .browser {
+    height: calc(100vh - 110px);
+    width: 100%;
+  }
+  #goOrigin {
+    color: #409EFF;
+  }
+  .hand {
+    cursor: pointer;
+    color: #409EFF;
+  }
+  .content {
+    height: 500px;
+    width: 800px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -250px;
+    padding-top: 60px;
+    box-shadow: 0px 5px 20px #C0CDCC, 5px 0px 20px #C0CDCC, 0px -5px 20px #C0CDCC, -5px 0px 20px #C0CDCC;
+    /* box-shadow: 0px 5px 20px #C0CDCC; */
+    border-radius: 5px;
+  }
+    .header {
+      font-size: 38px;
+      color: #000;
+      text-align: center;
+      font-weight: bolder;
+    }
+    .info {
+      font: 18px;
+      color: #606266;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .toUser {
+      font: 18px;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .browserLink {
+      padding-top: 40px;
+      text-align: center;
+      overflow: hidden;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+    img {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    .browserChoose {
+      cursor: pointer;
+      float: left;
+      width: 32%;
+      text-align: center;
+      font-size: 16px;
+      color: #000;
+    } 
+</style>
